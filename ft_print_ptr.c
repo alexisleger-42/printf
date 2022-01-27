@@ -6,23 +6,18 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:20 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:15:59 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 11:36:56 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int	ft_len_ptr(unsigned long long number)
 {
 	int	i;
 
 	i = 0;
-	while (i)
+	while (number)
 	{
 		number = number / 16;
 		i++;
@@ -39,9 +34,25 @@ void	ft_put_ptr(unsigned long long number)
 	}
 	else
 	{
-		if (number > 9)
-			ft_putchar(number - 10 + 'a');
-		else
+		if (number <= 9)
 			ft_putchar(number + '0');
+		else
+			ft_putchar(number - 10 + 'a');
 	}
+}
+
+int	ft_print_ptr(unsigned long long ptr)
+{
+	int	i;
+
+	i = 0;
+	i += write(1, "0x", 2);
+	if (ptr == 0)
+		i += write(1, "0", 1);
+	else
+	{
+		ft_put_ptr(ptr);
+		i += ft_len_ptr(ptr);
+	}
+	return (i);
 }

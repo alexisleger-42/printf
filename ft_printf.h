@@ -6,16 +6,15 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:33:34 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:10:50 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 11:26:43 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 void	ft_putchar(char c);

@@ -6,16 +6,11 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:14 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:15:56 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 10:49:48 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int	ft_print_str(char *str)
 {

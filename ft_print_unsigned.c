@@ -6,29 +6,11 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:41 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:16:04 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 11:42:28 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_len(long n)
-{
-	int	len;
-
-	len = 0;
-	if (n <= 0)
-	{
-		n = -n;
-		len++;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_unsigned_itoa(unsigned int n)
 {
@@ -53,22 +35,19 @@ char	*ft_unsigned_itoa(unsigned int n)
 	return (str);
 }
 
-void	ft_putchar(char c)
+int	ft_print_unsigned(unsigned int number)
 {
-	write(1, &c, 1);
-}
-
-int	ft_print_str(char *str)
-{
-	int	i;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	if (str == NULL)
+	if (number == 0)
+		i += write(1, "0", 1);
+	else
 	{
-		write(1, "(null)", 6);
-		return (6);
+		str = ft_unsigned_itoa(number);
+		i += ft_print_str(str);
+		free(str);
 	}
-	while (str[i])
-		ft_putchar(str[i++]);
 	return (i);
 }

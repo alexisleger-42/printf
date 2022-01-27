@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 10:54:39 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:15:43 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 10:56:17 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ void	ft_putchar(char c)
 
 int	ft_print_char(int c)
 {
+	ft_putchar(c);
+	return (1);
+}
+
+int	ft_print_percent(int c)
+{
+	c = '%';
 	ft_putchar(c);
 	return (1);
 }
@@ -41,7 +48,7 @@ int	ft_print_format(va_list args, const char format)
 	else if (format == 'x' || format == 'X')
 		print_len += ft_print_hexa(va_arg(args, unsigned int), format);
 	else if (format == '%')
-		print_len += ft_print_char(va_arg(args, int));
+		print_len += ft_print_percent(va_arg(args, int));
 	return (print_len);
 }
 

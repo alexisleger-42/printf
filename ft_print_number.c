@@ -6,16 +6,11 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:37 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/26 17:16:02 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/27 11:42:20 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int	ft_len(long n)
 {
@@ -61,4 +56,16 @@ char	*ft_itoa(int n)
 		i--;
 	}
 	return (str);
+}
+
+int	ft_print_number(int number)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = ft_itoa(number);
+	i += ft_print_str(str);
+	free(str);
+	return (i);
 }
