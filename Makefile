@@ -1,4 +1,6 @@
- NAME = libftprintf.a
+NAME = libftprintf.a
+
+HEADER = ft_printf.h
 
 SRCS = ft_printf.c ft_print_str.c ft_print_ptr.c ft_print_number.c \
 ft_print_unsigned.c ft_print_hexa.c

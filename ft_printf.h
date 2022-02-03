@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:33:34 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/27 11:26:43 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/29 14:50:02 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_print_ptr(unsigned long long ptr);
 int		ft_print_number(int number);
 int		ft_print_unsigned(unsigned int number);
 int		ft_print_hexa(unsigned int number, const char format);
+int		ft_printpercent(void);
 int		ft_print_format(va_list args, const char format);
 int		ft_printf(const char *format, ...);
 

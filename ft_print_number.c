@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:37 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/27 11:42:20 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/29 14:43:59 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_print_number(int number)
 
 	i = 0;
 	str = ft_itoa(number);
-	i += ft_print_str(str);
+	i = ft_print_str(str);
 	free(str);
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:41 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/27 11:42:28 by aleger           ###   ########.fr       */
+/*   Updated: 2022/01/29 14:44:01 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_print_unsigned(unsigned int number)
 	else
 	{
 		str = ft_unsigned_itoa(number);
-		i += ft_print_str(str);
+		i = ft_print_str(str);
 		free(str);
 	}
 	return (i);
