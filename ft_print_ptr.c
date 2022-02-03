@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:35:20 by aleger            #+#    #+#             */
-/*   Updated: 2022/01/27 11:36:56 by aleger           ###   ########.fr       */
+/*   Updated: 2022/02/03 12:07:10 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_print_ptr(unsigned long long ptr)
 	else
 	{
 		ft_put_ptr(ptr);
-		i += ft_len_ptr(ptr);
+		i = ft_len_ptr(ptr);
 	}
 	return (i);
 }
